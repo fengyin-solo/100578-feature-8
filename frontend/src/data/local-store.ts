@@ -2,7 +2,8 @@ import { SEED_ROWS } from './seed'
 import type { EntryRow } from './types'
 
 // 本地持久化：数据放在 localStorage 里，刷新、关掉再打开都还在。
-const STORAGE_KEY = 'substation-protection:entries'
+// 结构调整（定值单流转改版、新增整定范围版本）时抬升后缀，旧示例数据会整体让给新种子。
+const STORAGE_KEY = 'substation-protection:entries:v2'
 
 function clone<T>(value: T): T {
   return JSON.parse(JSON.stringify(value)) as T

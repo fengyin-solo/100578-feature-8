@@ -18,6 +18,8 @@ export type ModuleMeta = {
   actions: string[]
   actionTargets: Record<string, string>
   metrics: string[]
+  // 依附其他页面登记的支撑性模块（如整定范围挂在定值整定页里），不进导航与概览。
+  hidden?: boolean
 }
 
 export type PageResult = {
